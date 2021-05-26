@@ -1,17 +1,15 @@
-import './App.css';
-import React, {useState} from 'react';
+import React from "react";
+import "./App.css";
+import Form from "./components/Form";
 
-//importing components
-import PaymentForm from './components/PaymentForm';
 
-function App() {
+//use react hook form
+const App = () => {
   return (
-    <div className="App">
-      <div className="header-payment">
-        <PaymentForm/>
-      </div>
+    <div>
+        <Form/>
     </div>
-  );
-}
+  )
 
+}
 export default App;
