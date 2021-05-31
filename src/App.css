@@ -1,83 +1,44 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'PT Sans', sans-serif;
 }
 
-.container {
-  background: linear-gradient(to top, #30cfd0 0%, #330867 100%);
-  width: 100%;
-  min-height: 100vh;
+.home,
+.services,
+.products,
+.sign-up {
   display: flex;
-  justify-content: center;
+  height: 90vh;
   align-items: center;
-  /* width: 50%; */
+  justify-content: center;
+  font-size: 3rem;
 }
 
-.app-wrapper, .app-wrapper-two {
-  background-color: #fff;
-  min-width: 350px;
-  min-height: 650px;
-  padding: 30px;
-  box-sizing: border-box;
-  border-radius: 5px;
+.services {
+  background-image: url('/images/img-2.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
 }
 
-.title {
-  color: #5f08b1;
-  text-align: center;
-  margin: 40px 0px 40px 0px;
-  font-size: 2rem;
+.products {
+  background-image: url('/images/img-1.jpg');
+  background-position: center;
+  background-size: fill;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
 }
 
-.name, .purpose, .email, .paymentMethod,
-.amount, .cvc, .expDate, .cardNumber, .cardHolder, .purposeID {
-  margin: 20px;
-  color: #969292;
-  font-size: 16px;
-}
-
-.input {
-  height: 32px;
-  font-size: 20px;
-  outline: none;
-  width: 100%;
-  border-top-style: none;
-  border-left-style: none;
-  border-right-style: none;
-  border-bottom-style: 2px solid black;
-  margin-bottom: 10px;
-}
-
-.select {
-  height: 32px;
-  font-size: 16px;
-  outline: none;
-  width: 95%;
-  border-bottom-style: 2px solid black;
-  margin-bottom: 10px;
-}
-
-.radioGrp{
-  margin-left: 100px;
-}
-
-.confirmPayment {
-  display: flex;
-  text-transform: uppercase;
-  font-size: 20px;
-  border-radius: 25px;
-  color: white;
-  padding: 10px 60px;
-  background: linear-gradient(to right, #1d0ac9, #11a4be);
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
-    rgba(0, 0, 0, 0.22) 0px 15px 12px;
-  margin: auto;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  transition: all 0.1s;
-}
-
-button:octive {
-  transform: translateY(2px);
+.sign-up {
+  background-image: url('/images/img-8.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
 }
