@@ -1,36 +1,25 @@
 {
-  "name": "template-page",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.12.0",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^12.8.3",
-    "add": "^2.0.6",
-    "axios": "^0.20.0",
-    "bootstrap": "^4.5.2",
-    "downloadjs": "^1.4.7",
-    "node-sass": "^4.14.1",
-    "react": "^17.0.2",
-    "react-bootstrap": "^1.3.0",
-    "react-dom": "^17.0.2",
-    "react-dropzone": "^11.2.0",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3",
-    "web-vitals": "^1.1.2",
-    "yarn": "^1.22.10"
-  },
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "af group project front end",
+  "main": "index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html --open"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "author": "Sandunika Wasala",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.9.2",
+    "axios": "^0.21.1",
+    "bootstrap": "^5.0.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.2.0",
+    "react-select": "^4.3.1"
   },
   "browserslist": {
     "production": [

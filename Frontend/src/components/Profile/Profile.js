@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import './Profile.css';
+import '/Profile.css';
 
 const Profile = (props) => {
 
@@ -10,21 +10,25 @@ const Profile = (props) => {
     useEffect(() => {
         const getProfile = async (email) => {
             try {
-                const { data } = await axios.get(`http://localhost:3800/profile/${email}`);
+                const { data } = await axios.get(`http://localhost:3810/profile/${email}`);
                 setProfile(data);
                 console.log(profile.data.user.email);
             } catch (error) {
             }
         };
+        var email = window.sessionStorage.getItem("logged_user"); //store loguser email in session storage
 
-        if (props.location.query && props.location.query.email) {
-            getProfile(props.location.query.email);
+        if (email && email.length>0) {
+            getProfile(email);
         }
+
     }, []);
 
     const makePayment = (e) => {
         e.preventDefault();
     }
+
+
 
     return (
         <div className="">
@@ -42,7 +46,7 @@ const Profile = (props) => {
                                 <i className="zmdi zmdi-account"></i>
                                 <input
                                     className="input"
-                                    disabled="diabled"
+                                    disabled="disabled"
                                     placeholder="Full Name"
                                     type="text"
                                     name="fullname"
@@ -53,7 +57,7 @@ const Profile = (props) => {
                                 <i className="zmdi zmdi-email"></i>
                                 <input
                                     className="input"
-                                    disabled="diabled"
+                                    disabled="disabled"
                                     placeholder="Email"
                                     type="email"
                                     name="email"
@@ -64,7 +68,7 @@ const Profile = (props) => {
                                 <i className="zmdi zmdi-phone-in-talk"></i>
                                 <input
                                     className="input"
-                                    disabled="diabled"
+                                    disabled="disabled"
                                     placeholder="Phone"
                                     type="tel"
                                     name="phone"
@@ -74,7 +78,7 @@ const Profile = (props) => {
                             <div className="role input-container">
                                 <i className="zmdi zmdi-menu meterial-icons-name"></i>
                                 <select className="input"
-                                    disabled="diabled"
+                                    disabled="disabled"
                                     name="role"
                                     value={profile.data && profile.data.user ? profile.data.user.role : ''}
                                 >
@@ -87,7 +91,7 @@ const Profile = (props) => {
                             {profile.data && profile.data.paper &&
                                 <div className="fileName input-container">
                                     <i className="zmdi zmdi-file"></i>
-                                    <a className="fileLink" href={'http://localhost:3800' + profile.data.paper.url} target="_blank" title="Download" download="download">
+                                    <a className="fileLink" href={'http://localhost:3810' + profile.data.paper.url.replace('uploads','')} target="_blank" title="Download" download="download">
                                         {profile.data ? profile.data.paper.name : ''}
                                     </a>
                                 </div>}
@@ -96,7 +100,7 @@ const Profile = (props) => {
                                     <i className="zmdi zmdi-time"></i>
                                     <input
                                         className="input"
-                                        disabled="diabled"
+                                        disabled="disabled"
                                         placeholder="Status"
                                         type="text"
                                         name="status"
@@ -108,21 +112,20 @@ const Profile = (props) => {
                                     <i className="zmdi zmdi-comment"></i>
                                     <textarea
                                         className="input"
-                                        disabled="diabled"
+                                        disabled="disabled"
                                         placeholder="Comment"
                                         type="text"
                                         name="comment"
                                         value={profile.data ? profile.data.paper.description : ''}
                                     ></textarea>
                                 </div>}
-
                             <div>
-                                {/* <button className="submit" >
-                                Update
-                            </button> */}
+                                <Link to="/update-profile">
+                                    <button className="submit">Edit</button> 
+                                </Link>
                                 <button className="submit" onClick={makePayment} >
                                     Make Payment
-                            </button>
+                                </button>
                             </div>
                         </form>
                     </div>

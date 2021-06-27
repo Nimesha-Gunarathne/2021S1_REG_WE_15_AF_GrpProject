@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './Register.css';
+import '/Register.css';
 import signpic from "../images/signup.png";
 import { Link } from 'react-router-dom';
 
@@ -42,7 +42,7 @@ const Register = (props) => {
     const sendDataToBackend = (event) => {
 
         const payload = new FormData(event.target);
-        const url = "http://localhost:3800/register";
+        const url = "http://localhost:3810/register";
 
         let config = {
             headers: {
@@ -192,7 +192,7 @@ const Register = (props) => {
                                 />
                                 {errors.cpassword && <p className="error">{errors.cpassword}</p>}
                             </div>
-                            {(values.role == 'attendee') || (values.role) &&
+                            {(values.role) && (values.role != 'Attendee') &&
                                 <div className="fileName input-container">
                                     <i className="zmdi zmdi-file"></i>
                                     <input
@@ -204,7 +204,7 @@ const Register = (props) => {
                                         onChange={handleChange}
                                     />
                                 </div>}
-                            {(values.role == 'attendee') || (values.role) &&
+                            {(values.role) && (values.role != 'Attendee') &&
                                 <div className="FileUpload input-container">
                                     <i className="zmdi zmdi-upload"></i>
                                     <input
@@ -216,7 +216,7 @@ const Register = (props) => {
                                         onChange={handleChange}
                                     />
                                 </div>}
-                            {(values.role == 'attendee') || (values.role) &&
+                            {(values.role) && (values.role != 'Attendee') &&
                                 <div className="comment input-container">
                                     <i className="zmdi zmdi-comment"></i>
                                     <textarea

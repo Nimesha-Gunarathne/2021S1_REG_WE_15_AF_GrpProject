@@ -1,13 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './Login.css';
+import '/Login.css';
 import signpic from "../images/signup.png";
 import { Link } from 'react-router-dom';
 
 
 const Login = (props) => {
 
-    const [profile, setProfile] = useState('');
+    // const [profile, setProfile] = useState('');
+
+    useEffect(() => {
+        window.sessionStorage.clear(); // clear the logged_user
+    }, []);
 
     const submitHandler = (e) => {
         e.preventDefault();
@@ -19,7 +23,7 @@ const Login = (props) => {
 
     const sendDataToBackend = (payload) => {
 
-        const url = "http://localhost:3800/signin";
+        const url = "http://localhost:3810/signin";
 
         let config = {
             headers: {
@@ -32,10 +36,11 @@ const Login = (props) => {
             .then((res) => {
                 if (res.data.status == "success") {
                     console.log("Logged-in");
-                    setProfile(res.data.data.email);
+                    // setProfile(res.data.data.email);
+                    window.sessionStorage.setItem("logged_user", res.data.data.email); //store loguser email in session storage
                     document.getElementById('profileLink').click();
                 } else {
-                    console.log("invalid login");
+                    console.error("invalid login");
                     alert(res.data.message)
                 }
             })
@@ -76,12 +81,9 @@ const Login = (props) => {
                                 <button className="submit" >
                                     Sign in
                             </button>
-                                <Link hidden="hidden" id="profileLink" to={{
-                                    pathname: `/profile`,
-                                    query: { email: profile }
-                                }}>
+                                <Link hidden="hidden" id="profileLink" to="/profile">
                                     Profile
-                            </Link>
+                                </Link>
                             </div>
                         </form>
                     </div>
