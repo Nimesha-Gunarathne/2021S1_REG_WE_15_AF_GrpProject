@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const PaperModel = require('./Paper.model');
 mongoose.Promise = global.Promise;
 
 const UserSchema = new mongoose.Schema({
@@ -15,9 +16,6 @@ const UserSchema = new mongoose.Schema({
         type: String
     },
     password: {
-        type: String
-    },
-    image: {
         type: String
     }
 },

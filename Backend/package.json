@@ -1,25 +1,21 @@
 {
-  "name": "Backend",
+  "name": "backend",
   "version": "1.0.0",
-  "description": "",
-  "main": "RegistationService.js",
+  "description": "af group project back end ",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prod": "node RegistrationService",
-    "watch": "nodemon server --ignore public/",
-    "start": "npm run watch"
+    "start": "node RegistationServer.js"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Sandunika Wasala",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "config": "^3.3.6",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "mongodb": "^3.6.9",
-    "mongoose": "^5.12.11",
-    "multer": "^1.4.2",
-    "nodemon": "^2.0.7"
+    "mongoose": "^5.12.14",
+    "multer": "^1.4.2"
   }
 }

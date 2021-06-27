@@ -1,3 +1,7 @@
+// const mongoose =require("mongoose");
+// const Paper = require('../models/User.model');
+// const User = require('../models/Paper.model');
+
 const mongoose =require("mongoose");
 const User = mongoose.model('users');
 const Paper = mongoose.model('paper');
@@ -16,10 +20,9 @@ exports.register = async (req, res) => {
         paper = {
             email:req.body.email,
             type:req.body.role == 'Researcher' ? 'Research Paper' : (req.body.role == 'Workshop Presenter' ? 'Proposal Document' : ''),
-            // name:req.files[0].originalname, //actual file name
             name:req.body.fileName,
             description:req.body.comment,
-            url:req.files[0].path.replace('uploads','')
+            url:req.files[0].path.replace('src\\', '')
         }
     }
 
@@ -158,27 +161,68 @@ exports.getProfile = async (req, res) => {
         else if(user!=null){
             userData = user;
             userStatus = "success";
+            if(user.role != "Attendee"){
+                Paper.findOne({email: req.params.email }, function (err, paper) {
+
+                    if (err){
+                        console.log(err)
+                    }
+                    else if(paper!=null){
+                        paperData = paper;
+                        paperStatus = "success";
+                        res.status(200).json({
+                            userStatus: userStatus,
+                            paperStatus: paperStatus,
+                            data : {
+                                user: userData,
+                                paper: paperData
+                            }
+                        });
+                    }
+                });
+            }else{
+                res.status(200).json({
+                    userStatus: userStatus,
+                    paperStatus: paperStatus,
+                    data : {
+                        user: userData,
+                        paper: paperData
+                    }
+                });
+            }
         }
     });
 
-    await Paper.findOne({email: req.params.email }, function (err, paper) {
+    // await Paper.findOne({email: req.params.email }, function (err, paper) {
 
-        if (err){
-            console.log(err)
-        }
-        else if(paper!=null){
-            paperData = paper;
-            paperStatus = "success";
-        }
-    });
+    //     if (err){
+    //         console.log(err)
+    //     }
+    //     else if(paper!=null){
+    //         paperData = paper;
+    //         paperStatus = "success";
+    //     }
+    // });
 
-    res.status(200).json({
-        userStatus: userStatus,
-        paperStatus: paperStatus,
-        data : {
-            user: userData,
-            paper: paperData
-        }
-    });
+    // res.status(200).json({
+    //     userStatus: userStatus,
+    //     paperStatus: paperStatus,
+    //     data : {
+    //         user: userData,
+    //         paper: paperData
+    //     }
+    // });
     
+}
+
+exports.updateProfile = async (req, res) => {
+    var email = req.params.email
+
+    await User.findOneAndUpdate({email : email}, req.body)
+    .then(data => {
+        res.status(200).send({ data : data });
+    })
+    .catch(error => { 
+        res.status(500).send({ error : error.message });
+    });
 }
