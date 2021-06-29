@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-.container{
+.container_IT19177106{
   background: linear-gradient(to top, #30cfd0 0%, #330867 100%);
   width: 100%;
   min-height: 100vh;
@@ -12,7 +12,7 @@
   align-items: center;
 }
 
-.app-wrapper{
+.app-wrapper_IT19177106{
   background-color:#fff ;
   width: 960px;
   /* min-height: 650px; */
@@ -28,7 +28,7 @@
   transform: translate(-50%, -50%);
 }
 
-.title{
+.title_IT19177106{
   color: black;
   /* text-align: center; */
   /* margin: 80px 0px 40px 15px; */
@@ -36,26 +36,26 @@
   font-weight: bold;
 }
 
-.name,
-.email,
-.password,
-.phone,
-.cpassword,
-.user,
-.fileName,
-.status,
-.comment,
-.role{
+.name_IT19177106,
+.email_IT19177106,
+.password_IT19177106,
+.phone_IT19177106,
+.cpassword_IT19177106,
+.user_IT19177106,
+.fileName_IT19177106,
+.status_IT19177106,
+.comment_IT19177106,
+.role_IT19177106{
   margin: 5px;
   color: #4a4a4a;
   font-size: 16px;
 }
 
-.cpassword{
+.cpassword_IT19177106{
   margin-bottom: 40px;
 }
 
-.input{
+.input_IT19177106{
   height:35px;
   font-size: 15px;
   outline: none;
@@ -68,12 +68,12 @@
   padding-left: 4px;
 }
 
-.error{
+.error_It19177106{
   color: red;
   padding-left: 50px;
 }
 
-.submit{
+.submit_IT19177106{
   display: flex;
   text-transform: uppercase;
   font-size: 20px;
@@ -90,12 +90,12 @@
   transition: all 0.1s;
   margin-bottom: 20px;
 }
-
-button:octive{
+/* 
+button:active{
   transform: translateY(2px);
-}
+} */
 
-.form-success{
+.form-success_IT19177106{
   display: flex;
   justify-content: center;
   margin-top: 100px;
@@ -103,44 +103,38 @@ button:octive{
   color: #f80759;
 }
 
-.input-container{
+.input-container_IT19177106{
   display: flex;
   /* flex-wrap: wrap; */
 }
 
 /* zmdi class inside input-container class */
-.input-container .zmdi{
+.input-container_IT19177106 .zmdi{
   font-size: x-large;
   padding: 10px;
   flex-basis: 10%;
 }
 
-.input-container .input{
+.input-container_IT19177106 .input_IT19177106{
   /* font-size: x-large; */
   /* padding: 10px; */
   flex-basis: 90%;
 }
 
-body{
-  /* background: lightgray; */
-  /* background: linear-gradient(to top, #30cfd0 0%, #330867 100%); */
-  /* margin: 0 100px; */
-}
-
-.role select {
+.role_IT19177106 select {
   color: #807e7e;
   padding-left: 0px;
 }
 
-.form{
+.form_IT19177106{
   min-width: 440px;
 }
 
-.form-container{
+.form-container_IT19177106{
   min-width: 845px;
 }
 
-#root{
+.root_IT19177106{
   background: linear-gradient(to top, #30cfd0 0%, #330867 100%);
   width: 100vw;
   height: 100vh;
@@ -148,10 +142,10 @@ body{
   left: 0;
 }
 
-.fileLink{
+.fileLink_IT19177106{
     margin-top: 10px;
 }
 
-img{
+.img_IT19177106{
   filter: hue-rotate(45deg);
 }
