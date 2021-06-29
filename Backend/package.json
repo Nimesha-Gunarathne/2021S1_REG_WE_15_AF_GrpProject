@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node RegistationServer.js"
+    "start": "node Server.js"
   },
   "author": "Sandunika Wasala",
   "license": "ISC",
