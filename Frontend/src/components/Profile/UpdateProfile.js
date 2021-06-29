@@ -146,34 +146,34 @@ const UpdateProfile = (props) => {
 
     return (
         <div className="">
-            <div className="app-wrapper">
+            <div className="app-wrapper_IT19177106">
                 <Link to="/login">Logout</Link>
 
                 <div>
-                    <h2 className="title">Update Profile</h2>
+                    <h2 className="title_IT19177106">Update Profile</h2>
                 </div>
 
-                <div className="form-container row">
-                    <div className="form col">
+                <div className="form-container_IT19177106 row">
+                    <div className="form_IT19177106 col">
                         <form className="form-wrapper" onSubmit={handleFormSubmit}>
-                            <div className="name input-container">
+                            <div className="name_IT19177106 input-container_IT19177106">
                                 <i className="zmdi zmdi-account"></i>
                                 <input
                                     id="full_name"
-                                    className="input"
+                                    className="input_IT19177106"
                                     placeholder="Full Name"
                                     type="text"
                                     name="full_name"
                                     value={values.full_name}
                                     onChange={handleChange}
                                 />
-                                {errors.full_name && <p className="error">{errors.full_name}</p>}
+                                {errors.full_name && <p className="error_IT19177106">{errors.full_name}</p>}
                             </div>
-                            <div className="email input-container">
+                            <div className="email_IT19177106 input-container_IT19177106">
                                 <i className="zmdi zmdi-email"></i>
                                 <input
                                     id="email"
-                                    className="input"
+                                    className="input_IT19177106"
                                     placeholder="Email"
                                     disabled="disabled"
                                     type="email"
@@ -181,35 +181,35 @@ const UpdateProfile = (props) => {
                                     value={values.email}
                                     onChange={handleChange}
                                 />
-                                {errors.email && <p className="error">{errors.email}</p>}
+                                {errors.email && <p className="error_IT19177106">{errors.email}</p>}
                             </div>
-                            <div className="phone input-container">
+                            <div className="phone_IT19177106 input-container_IT19177106">
                                 <i className="zmdi zmdi-phone-in-talk"></i>
                                 <input
                                     id="phone"
-                                    className="input"
+                                    className="input_IT19177106"
                                     placeholder="Phone"
                                     type="tel"
                                     name="phone"
                                     value={values.phone}
                                     onChange={handleChange}
                                 />
-                                {errors.phone && <p className="error">{errors.phone}</p>}
+                                {errors.phone && <p className="error_IT19177106">{errors.phone}</p>}
                             </div>
 
                             <div>
-                                <button className="submit" >
+                                <button className="submit_IT19177106" >
                                     Update
                                 </button>
                                 <Link to="/profile">
-                                    <button className="submit">Cancel</button> 
+                                    <button className="submit_IT19177106">Cancel</button> 
                                 </Link>
                             </div>
                         </form>
                     </div>
                     <div className="signup-image col">
                         <figure>
-                            <img src={signpic} alt="registration pic" />
+                            <img className = "img_IT19177106" src={signpic} alt="registration pic" />
                         </figure>
                         
                     </div>
