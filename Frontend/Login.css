@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-.container{
+.container_IT19177106{
   background: linear-gradient(to top, #30cfd0 0%, #330867 100%);
   width: 100%;
   min-height: 100vh;
@@ -12,7 +12,7 @@
   align-items: center;
 }
 
-.app-wrapper{
+.app-wrapper_IT19177106{
   background-color:#fff ;
   width: 960px;
   padding: 20px 80px;
@@ -26,32 +26,25 @@
   transform: translate(-50%, -50%);
 }
 
-.title{
+.title_IT19177106{
   color: black;
   padding: 20px;
   font-weight: bold;
 }
 
-.name,
-.email,
-.password,
-.phone,
-.cpassword,
-.user,
-.fileName,
-.status,
-.comment,
-.role{
+.email_IT19177106,
+.password_IT19177106
+{
   margin: 5px;
   color: #4a4a4a;
   font-size: 16px;
 }
 
-.cpassword{
+/* .cpassword{
   margin-bottom: 40px;
-}
+} */
 
-.input{
+.input_IT19177106{
   height:35px;
   font-size: 15px;
   outline: none;
@@ -63,13 +56,13 @@
   margin-bottom: 10px;
   padding-left: 4px;
 }
-
-.error{
+/* 
+.error_IT19177106{
   color: red;
   padding-left: 50px;
-}
+} */
 
-.submit{
+.submit_IT19177106{
   display: flex;
   text-transform: uppercase;
   font-size: 20px;
@@ -87,62 +80,53 @@
   margin-bottom: 20px;
 }
 
-button:octive{
+button:active{
   transform: translateY(2px);
 }
 
-.form-success{
-  display: flex;
-  justify-content: center;
-  margin-top: 100px;
-  min-width: 370px;
-  color: #f80759;
-}
-
-.input-container{
+.input-container_IT19177106{
   display: flex;
 }
 
-/* zmdi class inside input-container class */
-.input-container .zmdi{
+.input-container_IT19177106 .zmdi{
   font-size: x-large;
   padding: 10px;
   flex-basis: 10%;
 }
 
-.input-container .input{
+.input-container_IT19177106 .input_IT19177106{
   flex-basis: 90%;
 }
 
-.role select {
+/* .role select {
   color: #807e7e;
   padding-left: 0px;
-}
+} */
 
-.form{
+.form_IT19177106{
   min-width: 440px;
 }
 
-.login-form{
+.login-form_IT19177106{
     padding-top: 40px;
 }
 
-.form-container{
+/* .form-container{
   min-width: 845px;
-}
-
-#root{
+} */
+ 
+.root_IT19177106{
   background: linear-gradient(to top, #30cfd0 0%, #330867 100%);
   width: 100vw;
   height: 100vh;
   position: absolute;
   left: 0;
-}
+} 
 
-.fileLink{
+/* .fileLink{
     margin-top: 10px;
-}
+} */
 
-img{
+.img_IT19177106{
   filter: hue-rotate(45deg);
 }
