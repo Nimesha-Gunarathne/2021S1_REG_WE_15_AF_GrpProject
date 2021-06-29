@@ -50,35 +50,36 @@ const Login = (props) => {
     };
 
     return (
-        <div className="">
-            <div className="app-wrapper">
 
-                <div className="form-container row">
-                    <div className="form login-form col">
+        <div className="">
+            <div className="app-wrapper_IT19177106">
+
+                <div className="form-container_IT19177106 row">
+                    <div className="form_IT19177106 login-form_IT19177106 col">
                         <div>
-                            <h2 className="title">Sign in</h2>
+                            <h2 className="title_IT19177106">Sign in</h2>
                         </div>
                         <form className="form-wrapper" onSubmit={submitHandler}>
-                            <div className="email input-container">
+                            <div className="email_IT19177106 input-container_IT19177106">
                                 <i className="zmdi zmdi-email"></i>
                                 <input
-                                    className="input"
+                                    className="input_IT19177106"
                                     placeholder="Email"
                                     type="email"
                                     name="email"
                                 />
                             </div>
-                            <div className="password input-container">
+                            <div className="password_IT19177106 input-container_IT19177106">
                                 <i className="zmdi zmdi-lock"></i>
                                 <input
-                                    className="input"
+                                    className="input_IT19177106"
                                     placeholder="Password"
                                     type="password"
                                     name="password"
                                 />
                             </div>
                             <div>
-                                <button className="submit" >
+                                <button className="submit_IT19177106" >
                                     Sign in
                             </button>
                                 <Link hidden="hidden" id="profileLink" to="/profile">
@@ -89,7 +90,7 @@ const Login = (props) => {
                     </div>
                     <div className="signup-image col">
                         <figure>
-                            <img src={signpic} alt="sign-in pic" />
+                            <img className = "img_IT19177106" src={signpic} alt="sign-in pic" />
                         </figure>
                         <Link to="/register">Don't have an account? Register here</Link>
                     </div>
@@ -98,6 +99,7 @@ const Login = (props) => {
             </div>
 
         </div>
+
     )
 
 };
