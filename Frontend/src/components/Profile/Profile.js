@@ -32,20 +32,20 @@ const Profile = (props) => {
 
     return (
         <div className="">
-            <div className="app-wrapper">
+            <div className="app-wrapper_IT19177106">
                 <Link to="/login">Logout</Link>
 
                 <div>
-                    <h2 className="title">Profile</h2>
+                    <h2 className="title_IT19177106">Profile</h2>
                 </div>
 
-                <div className="form-container row">
-                    <div className="form col">
+                <div className="form-container_IT19177106 row">
+                    <div className="form_IT19177106 col">
                         <form className="form-wrapper" >
-                            <div className="name input-container">
+                            <div className="name_IT19177106 input-container_IT19177106">
                                 <i className="zmdi zmdi-account"></i>
                                 <input
-                                    className="input"
+                                    className="input_IT19177106"
                                     disabled="disabled"
                                     placeholder="Full Name"
                                     type="text"
@@ -53,10 +53,10 @@ const Profile = (props) => {
                                     value={profile.data && profile.data.user ? profile.data.user.full_name : ''}
                                 />
                             </div>
-                            <div className="email input-container">
+                            <div className="email_IT19177106 input-container_IT19177106">
                                 <i className="zmdi zmdi-email"></i>
                                 <input
-                                    className="input"
+                                    className="input_IT19177106"
                                     disabled="disabled"
                                     placeholder="Email"
                                     type="email"
@@ -64,10 +64,10 @@ const Profile = (props) => {
                                     value={profile.data && profile.data.user ? profile.data.user.email : ''}
                                 />
                             </div>
-                            <div className="phone input-container">
+                            <div className="phone_IT19177106 input-container_IT19177106">
                                 <i className="zmdi zmdi-phone-in-talk"></i>
                                 <input
-                                    className="input"
+                                    className="input_IT19177106"
                                     disabled="disabled"
                                     placeholder="Phone"
                                     type="tel"
@@ -75,9 +75,9 @@ const Profile = (props) => {
                                     value={profile.data && profile.data.user ? profile.data.user.phone : ''}
                                 />
                             </div>
-                            <div className="role input-container">
+                            <div className="role_IT19177106 input-container_IT19177106">
                                 <i className="zmdi zmdi-menu meterial-icons-name"></i>
-                                <select className="input"
+                                <select className="input_IT19177106"
                                     disabled="disabled"
                                     name="role"
                                     value={profile.data && profile.data.user ? profile.data.user.role : ''}
@@ -89,17 +89,17 @@ const Profile = (props) => {
                                 </select>
                             </div>
                             {profile.data && profile.data.paper &&
-                                <div className="fileName input-container">
+                                <div className="fileName_IT19177106 input-container_IT19177106">
                                     <i className="zmdi zmdi-file"></i>
-                                    <a className="fileLink" href={'http://localhost:3810' + profile.data.paper.url.replace('uploads','')} target="_blank" title="Download" download="download">
+                                    <a className="fileLink_IT19177106" href={'http://localhost:3810' + profile.data.paper.url.replace('uploads','')} target="_blank" title_IT19177106="Download" download="download">
                                         {profile.data ? profile.data.paper.name : ''}
                                     </a>
                                 </div>}
                             {profile.data && profile.data.paper &&
-                                <div className="status input-container">
+                                <div className="status_IT19177106 input-container_IT19177106">
                                     <i className="zmdi zmdi-time"></i>
                                     <input
-                                        className="input"
+                                        className="input_IT19177106"
                                         disabled="disabled"
                                         placeholder="Status"
                                         type="text"
@@ -108,10 +108,10 @@ const Profile = (props) => {
                                     />
                                 </div>}
                             {profile.data && profile.data.paper &&
-                                <div className="comment input-container">
+                                <div className="comment_IT19177106 input-container_IT19177106">
                                     <i className="zmdi zmdi-comment"></i>
                                     <textarea
-                                        className="input"
+                                        className="input_IT19177106"
                                         disabled="disabled"
                                         placeholder="Comment"
                                         type="text"
@@ -121,11 +121,12 @@ const Profile = (props) => {
                                 </div>}
                             <div>
                                 <Link to="/update-profile">
-                                    <button className="submit">Edit</button> 
+                                    <button className="submit_IT19177106">Edit</button> 
                                 </Link>
-                                <button className="submit" onClick={makePayment} >
+                                {profile.data && profile.data.user && profile.data.user.role && profile.data.user.role == 'Researcher' &&
+                                <button className="submit_IT19177106" onClick={makePayment} >
                                     Make Payment
-                                </button>
+                                </button>}
                             </div>
                         </form>
                     </div>
