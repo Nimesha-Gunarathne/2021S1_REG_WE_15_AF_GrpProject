@@ -110,53 +110,53 @@ const Register = (props) => {
 
     return (
         <div className="">
-            <div className="app-wrapper">
+            <div className="app-wrapper_IT19177106">
                 <div>
-                    <h2 className="title">Sign up</h2>
+                    <h2 className="title_IT19177106">Sign up</h2>
                 </div>
 
-                <div className="form-container row">
+                <div className="form-container_IT19177106 row">
                     <div className="form col">
                         <form className="form-wrapper" onSubmit={handleFormSubmit}>
-                            <div className="name input-container">
+                            <div className="name_IT19177106 input-container_IT19177106">
                                 <i className="zmdi zmdi-account"></i>
                                 <input
-                                    className="input"
+                                    className="input_IT19177106"
                                     placeholder="Full Name"
                                     type="text"
                                     name="fullname"
                                     value={values.fullname}
                                     onChange={handleChange}
                                 />
-                                {errors.fullname && <p className="error">{errors.fullname}</p>}
+                                {errors.fullname && <p className="error_IT19177106">{errors.fullname}</p>}
                             </div>
-                            <div className="email input-container">
+                            <div className="email_IT19177106 input-container_IT19177106">
                                 <i className="zmdi zmdi-email"></i>
                                 <input
-                                    className="input"
+                                    className="input_IT19177106"
                                     placeholder="Email"
                                     type="email"
                                     name="email"
                                     value={values.email}
                                     onChange={handleChange}
                                 />
-                                {errors.email && <p className="error">{errors.email}</p>}
+                                {errors.email && <p className="error_IT19177106">{errors.email}</p>}
                             </div>
-                            <div className="phone input-container">
+                            <div className="phone_IT19177106 input-container_IT19177106">
                                 <i className="zmdi zmdi-phone-in-talk"></i>
                                 <input
-                                    className="input"
+                                    className="input_IT19177106"
                                     placeholder="Phone"
                                     type="tel"
                                     name="phone"
                                     value={values.phone}
                                     onChange={handleChange}
                                 />
-                                {errors.phone && <p className="error">{errors.phone}</p>}
+                                {errors.phone && <p className="error_IT19177106">{errors.phone}</p>}
                             </div>
-                            <div className="role input-container">
+                            <div className="role_IT19177106 input-container_IT19177106">
                                 <i className="zmdi zmdi-menu meterial-icons-name"></i>
-                                <select className="input"
+                                <select className="input_IT19177106"
                                     name="role"
                                     value={values.role}
                                     onChange={handleChange}
@@ -166,37 +166,37 @@ const Register = (props) => {
                                     <option value="Workshop Presenter">Workshop Presenter</option>
                                     <option value="Attendee">Attendee</option>
                                 </select>
-                                {errors.role && <p className="error">{errors.role}</p>}
+                                {errors.role && <p className="error_IT19177106">{errors.role}</p>}
                             </div>
-                            <div className="password input-container">
+                            <div className="password_IT19177106 input-container_IT19177106">
                                 <i className="zmdi zmdi-lock"></i>
                                 <input
-                                    className="input"
+                                    className="input_IT19177106"
                                     placeholder="Password"
                                     type="password"
                                     name="password"
                                     value={values.password}
                                     onChange={handleChange}
                                 />
-                                {errors.password && <p className="error">{errors.password}</p>}
+                                {errors.password && <p className="error_IT19177106">{errors.password}</p>}
                             </div>
-                            <div className="cpassword input-container">
+                            <div className="cpassword_IT19177106 input-container_IT19177106">
                                 <i className="zmdi zmdi-lock"></i>
                                 <input
-                                    className="input"
+                                    className="input_IT19177106"
                                     placeholder="Confirm Password"
                                     type="password"
                                     name="cpassword"
                                     value={values.cpassword}
                                     onChange={handleChange}
                                 />
-                                {errors.cpassword && <p className="error">{errors.cpassword}</p>}
+                                {errors.cpassword && <p className="error_IT19177106">{errors.cpassword}</p>}
                             </div>
                             {(values.role) && (values.role != 'Attendee') &&
-                                <div className="fileName input-container">
+                                <div className="fileName_IT19177106 input-container_IT19177106">
                                     <i className="zmdi zmdi-file"></i>
                                     <input
-                                        className="input"
+                                        className="input_IT19177106"
                                         placeholder="Document Title"
                                         type="text"
                                         name="fileName"
@@ -205,10 +205,10 @@ const Register = (props) => {
                                     />
                                 </div>}
                             {(values.role) && (values.role != 'Attendee') &&
-                                <div className="FileUpload input-container">
+                                <div className="FileUpload input-container_IT19177106">
                                     <i className="zmdi zmdi-upload"></i>
                                     <input
-                                        className="input file-input"
+                                        className="input_IT19177106 file-input"
                                         placeholder="Upload File"
                                         type="file"
                                         name="document"
@@ -217,10 +217,10 @@ const Register = (props) => {
                                     />
                                 </div>}
                             {(values.role) && (values.role != 'Attendee') &&
-                                <div className="comment input-container">
+                                <div className="comment_IT19177106 input-container_IT19177106">
                                     <i className="zmdi zmdi-comment"></i>
                                     <textarea
-                                        className="input"
+                                        className="input_IT19177106"
                                         placeholder="Comment"
                                         type="text"
                                         name="comment"
@@ -230,7 +230,7 @@ const Register = (props) => {
                                 </div>}
 
                             <div>
-                                <button className="submit" >
+                                <button className="submit_IT19177106" >
                                     Sign Up
                             </button>
                             </div>
@@ -238,7 +238,7 @@ const Register = (props) => {
                     </div>
                     <div className="signup-image col">
                         <figure>
-                            <img src={signpic} alt="registration pic" />
+                            <img className = "img_IT19177106" src={signpic} alt="registration pic" />
                         </figure>
                         <Link to="/login">Already registered? Login here</Link>
                     </div>
