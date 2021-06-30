@@ -1,13 +1,14 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "af group project back end ",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node Server.js"
   },
-  "author": "IT19146102",
+  "author": "Sandunika Wasala",
+
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -15,6 +16,7 @@
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "mongoose": "^5.12.15"
+    "mongoose": "^5.12.14",
+    "multer": "^1.4.2"
   }
 }
