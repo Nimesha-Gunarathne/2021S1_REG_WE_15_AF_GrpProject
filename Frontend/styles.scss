@@ -5,14 +5,18 @@
     
   }
   
-  body {
+
+ body {
+
     letter-spacing: 1px;
     padding: 20px;
     height: 720px;
     background: linear-gradient(to top, #30cfd0 0%, #330867 100%);
   }
   
-  h1 {
+
+  .h11 {
+
     text-align: center;
     font-size: 2rem;
   }
@@ -142,4 +146,26 @@
     max-height: 100%;
     overflow: auto;
   }
+  .notification{
+    background-color : #444;
+    color: white;
+    padding : 16px;
+    position : absolute;
+    top : 16px;
+    right : 16px;
+    z-index: 999;
+    transition : top 0.5s ease;
+  }
+
+  .notCloseBTN{
+    background-color : #444;
+    height : 0px;
+    width : 0px;
+    color : white;
+  }
+
+  .fa-bell{
+    background-color : white;
+  }
+
   
