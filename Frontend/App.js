@@ -24,6 +24,8 @@ import Payment from './src/components/pages/payment/payment';
 //Galagoda
 import AllResearchPapers from './src/components/pages/viewAllFiles/fileListResearchPapers';
 import AllWorkshopProposals from './src/components/pages/viewAllFiles/fileListWorkshopProposals';
+import ApprovedResearches from './src/components/pages/conferenceContent/ApprovedResearchPapres';
+import ApprovedWorkshops from './src/components/pages/conferenceContent/ApprovedWorkshopProposals';
 
 
 function App() {
@@ -56,6 +58,8 @@ function App() {
 
           <Route component={AllResearchPapers} path="/research" />
           <Route component={AllWorkshopProposals} path="/workshop" />
+          <Route component={ApprovedResearches} path="/approved-research" />
+          <Route component={ApprovedWorkshops} path="/approved-workshop" />
 
           </Switch>
          

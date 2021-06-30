@@ -62,7 +62,6 @@ const updatePaper = async (req, res) => {
         paymentStatus = "APPLICABLE"
     }
 
-    console.log(paymentStatus);
     await File.findOneAndUpdate({ _id: id }, { $set: { state: newStatus, payment: paymentStatus } })
         .then(data => {
 
@@ -80,10 +79,36 @@ const updatePaper = async (req, res) => {
         });
 }
 
+const getApprovedWorkshops = async (req, res) => {
+    try {
+        const docs = await File.find({ state: "APPROVED", type: "Proposal Document" });
+        const sortedByCreationDate = docs.sort(
+            (a, b) => b.createdAt - a.createdAt
+        );
+        res.send(sortedByCreationDate);
+    } catch (error) {
+        res.status(400).send('Something Went Wrong!!!');
+    }
+}
+
+const getApprovedResearches = async (req, res) => {
+    try {
+        const docs = await File.find({ state: "APPROVED", type: "Research Paper" });
+        const sortedByCreationDate = docs.sort(
+            (a, b) => b.createdAt - a.createdAt
+        );
+        res.send(sortedByCreationDate);
+    } catch (error) {
+        res.status(400).send('Something Went Wrong!!!');
+    }
+}
+
 module.exports = {
     viewPDF,
     download,
     getAllFilesResearch,
     updatePaper,
-    getAllFilesWorkshop
+    getAllFilesWorkshop,
+    getApprovedWorkshops,
+    getApprovedResearches
 };

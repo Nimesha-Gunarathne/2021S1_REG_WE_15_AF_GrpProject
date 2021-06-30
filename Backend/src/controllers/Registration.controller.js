@@ -4,8 +4,6 @@ const Paper = mongoose.model('paper');
 
 exports.register = async (req, res) => {
 
-    console.log("Backk");
-
     let user = {
         full_name: req.body.fullname,
         email: req.body.email,

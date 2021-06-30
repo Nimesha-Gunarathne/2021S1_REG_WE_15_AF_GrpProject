@@ -8,6 +8,8 @@ module.exports = function () {
     router.get('/getAllFilesResearch', File_Controller.getAllFilesResearch);
     router.put('/updatePaper/:id', File_Controller.updatePaper);
     router.get('/getAllFilesWorkshop', File_Controller.getAllFilesWorkshop);
+    router.get('/getApprovedWorkshops', File_Controller.getApprovedWorkshops);
+    router.get('/getApprovedResearches', File_Controller.getApprovedResearches);
     
     return router;
 }
