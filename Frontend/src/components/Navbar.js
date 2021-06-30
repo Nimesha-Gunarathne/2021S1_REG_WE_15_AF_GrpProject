@@ -49,7 +49,7 @@ function Navbar() {
             </li>
             <li className='nav-item'>
               <Link
-                to='/research'
+                to='/approved-research'
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
@@ -59,7 +59,7 @@ function Navbar() {
 
             <li className='nav-item'>
               <Link
-                to='/workshop'
+                to='/approved-workshop'
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
@@ -69,13 +69,14 @@ function Navbar() {
 
             <li className='nav-item'>
               <Link
-                to='/add-conference'
+                to='/dashboard'
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-                Add Conference
+                Dashboard
               </Link>
             </li>
+
           </ul>
           <Link
             to='/profile'

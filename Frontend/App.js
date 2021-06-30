@@ -9,6 +9,7 @@ import SignUp from './src/components/pages/SignUp';
 import AddConference from './src/components/pages/AddConference';
 import Editor from './src/components/pages/Eaditor';
 import Approvedconference from './src/components/pages/ApprovedConference';
+import Dashboard from './src/components/pages/Dashboard';
 
 // Sadunika
 import Login from './src/components/pages/Login/Login';
@@ -41,6 +42,7 @@ function App() {
           <Route path='/add-conference' component={AddConference} />
           <Route path='/editor' component={Editor} />
           <Route path="/approvedconference" component={Approvedconference}/>
+          <Route path="/dashboard" component={Dashboard}/>
 
         {/* Sadunika */}
           <Route component={Login} path="/" exact={true} />

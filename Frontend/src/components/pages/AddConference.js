@@ -136,9 +136,6 @@ class CreateConference extends Component {
                 </div>
               </form>
             </div>
-            <div>
-              <Link to="./editor" className="back">Eaditor</Link>
-            </div>
           </div>
 
         </div>
