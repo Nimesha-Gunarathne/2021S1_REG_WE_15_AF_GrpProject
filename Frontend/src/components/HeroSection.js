@@ -6,13 +6,13 @@ import Video from '../videos/video-1.mp4'
 
 function HeroSection() {
   return (
-   <div className="IT19145280_HS"> 
+    <div className="IT19145280_HS">
       <div className='hero-container'>
         <video src={Video} autoPlay loop muted />
-        <h1>Title/date/</h1>
-        <p>3RD INTERNATIONAL CONFERENCE</p>
+        <h1>3RD INTERNATIONAL CONFERENCE</h1>
+        <p></p>
       </div>
-  </div>   
+    </div>
   );
 }
 

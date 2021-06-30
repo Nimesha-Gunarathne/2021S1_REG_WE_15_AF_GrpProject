@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const File_Controller = require('../controller/controller.file');
+const File_Controller = require('../controllers/controller.file');
 
 module.exports = function () {
     router.get('/viewPDF/:id', File_Controller.viewPDF);

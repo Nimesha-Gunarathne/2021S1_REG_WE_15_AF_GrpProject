@@ -1,0 +1,44 @@
+
+
+.IT19111384_Payment_container {
+  background: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 50%; */
+}
+
+.IT19111384_Payment_app-wrapper {
+  background-color: #fff;
+  min-width: 650px;
+  min-height: 650px;
+  padding: 30px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.IT19111384_Payment_title {
+  color: #5f08b1;
+  text-align: center;
+  margin: 5px 0px 5px 0px;
+  font-size: 2rem;
+}
+
+.IT19111384_Payment_confirmPayment {
+  display: flex;
+  text-transform: uppercase;
+  font-size: 20px;
+  border-radius: 25px;
+  color: white;
+  padding: 10px 60px;
+  background: linear-gradient(to right, #1d0ac9, #11a4be);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  margin: auto;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.1s;
+}

@@ -7,11 +7,11 @@ const multer = require('multer'); //for file upload
 const path = require('path');
 
 const storageObj = multer.diskStorage({
-    destination: function(req, file, cb) {
+    destination: function (req, file, cb) {
         cb(null, 'src/uploads/paper/'); //file storage path
     },
     // By default, multer removes file extensions so let's add them back
-    filename: function(req, file, cb) {
+    filename: function (req, file, cb) {
         cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
     }
 });
@@ -22,9 +22,10 @@ router.post('/register', upload.any(), registrationController.register); // hand
 
 router.post('/signin', registrationController.signin);
 
+router.post('/ckeckStatus', registrationController.ckeckStatus);
+
 router.get('/profile/:email', registrationController.getProfile);
 
 router.put('/update-profile/:email', registrationController.updateProfile)
 
-//export the router
 module.exports = router;

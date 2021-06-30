@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+mongoose.set('useFindAndModify', false);
 mongoose.Promise = global.Promise;
 
 const PaperSchema = new mongoose.Schema({
@@ -20,6 +21,10 @@ const PaperSchema = new mongoose.Schema({
     state: {
         type: String,
         default: "PENDING"
+    },
+    payment: {
+        type: String,
+        default: "NOT APPLICABLE"
     }
 },
 { timestamps: true });

@@ -1,47 +1,70 @@
+const express = require('express');
 const mongoose = require('mongoose');
-const express = require('express');//import express
-const bodyParser = require("body-parser");
-const cors = require("cors");
+const dotenv = require('dotenv');
+const cors = require('cors');
+const bodyParser = require('body-parser');
+const ConfernceRoute= require('./src/api/api.conference');
 
-//env file config
-require('dotenv').config({path: '.env'});
+// Nimesha
+const PaymentRoute= require('./src/api/api.payment');
+const fileRoute = require('./src/controllers/controller.template')
 
-//Database conection
-mongoose.connect(process.env.DATABASE,
-    {
-        useUnifiedTopology:true,
-        useNewUrlParser:true,
-        useFindAndModify: false,
-        //useCreateIndex: true
-    }
-);
+//sadunika
+require('./src/models/Paper.model')
+require('./src/models/User.model')
+const Registrationroutes = require("./src/api/Registration.api");
 
-// mongoose.Promise = global.Promise;
-// mongoose.connection.on('error', (err) => {
-//     console.error(`Database Connection Error -> ${err}`);
+//Galagoda
+const FileRoute = require('./src/api/api.file');
+
+
+
+dotenv.config();
+const app = express();
+app.use(cors());
+app.use(bodyParser.json());
+
+const PORT = process.env.PORT || 8070;
+const MONGODB_URI = process.env.MONGODB_URI;
+
+// mongoose.connect(MONGODB_URI,{
+//         useCreateIndex:true,
+//         useNewUrlParser:true,
+//         useUnifiedTopology:true,
+//         useFindAndModify:false
+// },(error) =>{
+//     if(error){
+//         console.log('DataBase ERROR: ',error.message);
+//     }
 // });
 
-require("./src/models/Paper.model");
-require("./src/models/User.model");
+mongoose.connect('mongodb://127.0.0.1:27017/ICAF',{
+        useCreateIndex:true,
+        useNewUrlParser:true,
+        useUnifiedTopology:true
+});
 
-const app = express(); //initialise app with express
+mongoose.connection.once('open', () => {
+    console.log('Database Synced');
+});
 
-// var corsOptions = {
-//     origin: "http://localhost:1234"
-// };
+app.route('/').get((req,res)=>{
+    res.send('SLIIT AF Project');
+});
 
-// app.use(cors(corsOptions));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+ app.use('/conference',ConfernceRoute());
 
-app.use(express.static(__dirname + '/src/uploads'));
+ //Nimesha
+ app.use('/payment', PaymentRoute());
+ app.use('/template', fileRoute);
 
-const routes = require("./src/api/Registration.api");
+ //Sadunika
+  app.use(express.static(__dirname + '/src/uploads'));
+  app.use('/user', Registrationroutes)
 
-app.use('/', routes)
-
-//start the server on port 3810
-const server = app.listen(3810,() => {
-    console.log(`Registation Running on Port ${server.address().port}`);
-    
-})
+//Galagoda
+ app.use('/file',FileRoute());
+ 
+app.listen(PORT, () =>{
+    console.log(`Server is up and running on PORT ${PORT}`);
+});

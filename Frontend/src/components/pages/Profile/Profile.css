@@ -1,0 +1,143 @@
+* {
+    margin : 0;
+    padding: 0;
+}
+
+body {
+  letter-spacing: 1px;
+  background: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+}
+
+.container{
+  background: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.app-wrapper_IT19177106{
+  background-color:#fff ;
+  width: 960px;
+  padding: 10px 40px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  box-shadow: black 4px 16px 20px 0px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* height: 600px; */
+}
+
+.title_IT19177106{
+  color: black;
+  padding: 20px;
+  font-weight: bold;
+}
+
+.name_IT19177106,
+.email_IT19177106,
+.phone_IT19177106,
+.fileName_IT19177106,
+.status_IT19177106,
+.comment_IT19177106,
+.role_IT19177106{
+  margin: 5px;
+  color: #4a4a4a;
+  font-size: 16px;
+}
+
+.input_IT19177106{
+  height:35px;
+  font-size: 15px;
+  outline: none;
+  width: 100%;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid gray;
+  margin-bottom: 10px;
+  padding-left: 4px;
+}
+
+ .error_IT19177106{
+  color: red;
+  padding-left: 50px;
+} 
+
+.submit_IT19177106{
+  display: flex;
+  text-transform: uppercase;
+  font-size: 20px;
+  border-radius: 10px;
+  color: white;
+  padding: 10px 60px;
+  background: linear-gradient(to right, #30cfd0,#330867 );
+  box-shadow: rgba(0,0,0,0.3) 0px 19px 38px,
+  rgba(0,0,0,0.22) 0px 15px 12px;
+  margin: auto;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.1s;
+  margin-bottom: 20px;
+}
+
+button:octive{
+  transform: translateY(2px);
+}
+
+.input-container_IT19177106{
+  display: flex;
+}
+
+/* zmdi class inside input-container class */
+.input-container_IT19177106 .zmdi{
+  font-size: x-large;
+  padding: 10px;
+  flex-basis: 10%;
+}
+
+.input-container_IT19177106 .input_IT19177106{
+  flex-basis: 90%;
+}
+
+.role_IT19177106 select {
+  color: #807e7e;
+  padding-left: 0px;
+}
+
+.form_IT19177106{
+  min-width: 440px;
+}
+
+.form-container_IT19177106{
+  min-width: 845px;
+}
+
+.fileLink_IT19177106{
+    margin-top: 10px;
+}
+
+.img_IT19177106{
+  filter: hue-rotate(45deg);
+}
+
+.approved_status{
+  font-size: 13px;
+  margin-left: 300px;
+  margin-right: 5px;
+  color: red;
+}
+.logout_key{
+  margin-top: 40px;
+  font-size: 20px;
+  padding-top: 200px;
+}

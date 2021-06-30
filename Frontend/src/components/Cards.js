@@ -24,7 +24,7 @@ class Cards extends Component {
     return (
       <div className='cards'>
         <div className="h1Card">Approved Conference</div>
-       
+
         <div className='cards__container'>
           <div className='cards__wrapper'>
             <ul className='cards__items'>

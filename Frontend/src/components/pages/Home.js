@@ -5,14 +5,16 @@ import FlipCards from '../FlipCard';
 import HeroSection from '../HeroSection';
 import Footer from '../Footer';
 import FooterNew from '../Footer/Footer';
+import Navbar from '../Navbar';
 
 function Home() {
   return (
     <>
+      <Navbar />
       <HeroSection />
-      <FlipCards/>
+      <FlipCards />
       <Cards />
-      
+
       <FooterNew />
     </>
   );

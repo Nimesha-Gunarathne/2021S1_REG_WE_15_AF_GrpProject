@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
+import ProfileImage from '../images/profileImg.png';
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -33,13 +34,13 @@ function Navbar() {
           </div>
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>
-              <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+              <Link to='/home' className='nav-links' onClick={closeMobileMenu}>
                 Home
               </Link>
             </li>
             <li className='nav-item'>
               <Link
-                to='/services'
+                to='/download'
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
@@ -48,27 +49,27 @@ function Navbar() {
             </li>
             <li className='nav-item'>
               <Link
-                to='/products'
+                to='/research'
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-                Content
+                Researchs
               </Link>
             </li>
 
             <li className='nav-item'>
               <Link
-                to='/products'
+                to='/workshop'
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-                Registration 
+                Workshops
               </Link>
             </li>
 
             <li className='nav-item'>
               <Link
-                to='/register'
+                to='/add-conference'
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
@@ -76,8 +77,14 @@ function Navbar() {
               </Link>
             </li>
           </ul>
-          {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
-          {button && <Button buttonStyle='btn--outline'>SIGN IN</Button>}
+          <Link
+            to='/profile'
+            className='nav-links'
+            onClick={closeMobileMenu}
+          >
+            <img src={ProfileImage} className="ProfileImg" href="/profile"></img>
+          </Link>
+
         </div>
       </nav>
     </>

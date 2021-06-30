@@ -10,6 +10,5 @@ module.exports = function() {
     router.get('/getDoneConference', Conferencecontroller.getDoneConference);
     router.get('/getRejectConference', Conferencecontroller.getRejectConference);
     router.put('/updateStatus/:id', Conferencecontroller.updateConferenceStatus);
-    // router.get('/amount/:id', Coursecontroller.calculateAmount);
     return router;
 }

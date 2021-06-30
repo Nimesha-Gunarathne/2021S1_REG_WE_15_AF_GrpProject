@@ -3,8 +3,21 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const cors = require('cors');
 const bodyParser = require('body-parser');
- const ConfernceRoute= require('./src/api/api.conference');
-// const courseRoute= require('./src/routes/course/index');
+const ConfernceRoute= require('./src/api/api.conference');
+
+// Nimesha
+const PaymentRoute= require('./src/api/api.payment');
+const fileRoute = require('./src/controllers/controller.template')
+
+//sadunika
+require('./src/models/Paper.model')
+require('./src/models/User.model')
+const Registrationroutes = require("./src/api/Registration.api");
+
+//Galagoda
+const FileRoute = require('./src/api/api.file');
+
+
 
 dotenv.config();
 const app = express();
@@ -25,7 +38,7 @@ const MONGODB_URI = process.env.MONGODB_URI;
 //     }
 // });
 
-mongoose.connect('mongodb://127.0.0.1:27017/AF-PROJECT',{
+mongoose.connect('mongodb://127.0.0.1:27017/ICAF',{
         useCreateIndex:true,
         useNewUrlParser:true,
         useUnifiedTopology:true
@@ -40,9 +53,18 @@ app.route('/').get((req,res)=>{
 });
 
  app.use('/conference',ConfernceRoute());
-// app.use('/course',courseRoute());
 
+ //Nimesha
+ app.use('/payment', PaymentRoute());
+ app.use('/template', fileRoute);
 
+ //Sadunika
+  app.use(express.static(__dirname + '/src/uploads'));
+  app.use('/user', Registrationroutes)
+
+//Galagoda
+ app.use('/file',FileRoute());
+ 
 app.listen(PORT, () =>{
     console.log(`Server is up and running on PORT ${PORT}`);
 });

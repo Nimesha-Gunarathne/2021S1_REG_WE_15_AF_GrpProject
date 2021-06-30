@@ -9,7 +9,6 @@ const ConferenceSchema = new mongoose.Schema({
     keynoteSpeaker: {type: String, requried: true, trim:true},
     gender: {type: String, requried: true, trim:true},
     status:{type: String, requried: true, trim:true},
-    // courses:[{type: mongoose.Schema.Types.ObjectId, requried: false, ref: 'courses'}] //many to many relationship
 
 });
 
