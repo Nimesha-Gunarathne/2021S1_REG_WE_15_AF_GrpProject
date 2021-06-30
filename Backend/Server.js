@@ -16,21 +16,21 @@ mongoose.connect(process.env.DATABASE,
     }
 );
 
-mongoose.Promise = global.Promise;
-mongoose.connection.on('error', (err) => {
-    console.error(`Database Connection Error -> ${err}`);
-});
+// mongoose.Promise = global.Promise;
+// mongoose.connection.on('error', (err) => {
+//     console.error(`Database Connection Error -> ${err}`);
+// });
 
 require("./src/models/Paper.model");
 require("./src/models/User.model");
 
 const app = express(); //initialise app with express
 
-var corsOptions = {
-    origin: "http://localhost:1234"
-};
+// var corsOptions = {
+//     origin: "http://localhost:1234"
+// };
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
